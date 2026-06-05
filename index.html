@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENERGY — Фитнес-клуб</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header" id="top">
+        <div class="container header__inner">
+            <a href="#top" class="logo">
+                <img src="images/logo.png" alt="Логотип ENERGY">
+                <span class="logo__text">ENERGY</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">О клубе</a></li>
+                    <li><a href="#gallery" class="nav__link">Залы</a></li>
+                    <li><a href="#info" class="nav__link">Акция</a></li>
+                    <li><a href="#contact" class="nav__link">Запись</a></li>
+                </ul>
+            </nav>
+
+            <div class="clock" id="clock">--:--:--</div>
+
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="hero">
+            <div class="container hero__content">
+                <h1 class="hero__title">Стань сильнее каждый&nbsp;день</h1>
+                <p class="hero__subtitle">
+                    Современный фитнес-клуб в центре города. Тренажёрный зал,
+                    групповые занятия, бассейн и персональные тренеры — всё для твоей формы.
+                </p>
+                <a href="#contact" class="btn btn--big">Записаться на тренировку</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container about__inner">
+            <div class="about__text">
+                <h2 class="section-title">О клубе ENERGY</h2>
+                <p>
+                    ENERGY — это <a href="#info">пространство энергии и движения</a>, где
+                    каждый найдёт занятие по душе. Мы работаем круглосуточно, чтобы вы
+                    могли тренироваться в удобное время.
+                </p>
+                <p>Что вас ждёт в клубе:</p>
+                <ul class="list">
+                    <li>Более 80 единиц современного оборудования</li>
+                    <li>Свыше 20 групповых программ в неделю</li>
+                    <li>Бассейн 25 метров и зона СПА</li>
+                    <li>Сертифицированные персональные тренеры</li>
+                </ul>
+
+                <h3 class="subtitle">Наши тарифы</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Тариф</th>
+                            <th>Срок</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Старт</td><td>1 месяц</td><td>2 900 ₽</td></tr>
+                        <tr><td>Актив</td><td>6 месяцев</td><td>12 900 ₽</td></tr>
+                        <tr><td>Безлимит</td><td>12 месяцев</td><td>21 900 ₽</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="about__media">
+                <div class="about__frame">
+                    <img src="images/about.jpg" alt="Клуб работает 24/7" class="zoom-img">
+                </div>
+                <p class="about__caption">Открыто 24 часа в сутки, 7 дней в неделю</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Наши залы</h2>
+
+            <div class="slider" id="slider">
+                <div class="slider__track" id="sliderTrack">
+                    <div class="slide"><img src="images/gallery1.jpg" alt="Тренажёрный зал"></div>
+                    <div class="slide"><img src="images/gallery2.jpg" alt="Кардио-зона"></div>
+                    <div class="slide"><img src="images/gallery3.jpg" alt="Групповые занятия"></div>
+                    <div class="slide"><img src="images/gallery4.jpg" alt="Зона свободных весов"></div>
+                    <div class="slide"><img src="images/gallery5.jpg" alt="Бассейн"></div>
+                    <div class="slide"><img src="images/gallery6.jpg" alt="Йога и стретчинг"></div>
+                </div>
+
+                <button class="slider__btn slider__btn--prev" id="prevBtn" aria-label="Назад">&#10094;</button>
+                <button class="slider__btn slider__btn--next" id="nextBtn" aria-label="Вперёд">&#10095;</button>
+
+                <div class="slider__controls">
+                    <button class="btn btn--small" id="playBtn">▶ Авто</button>
+                    <button class="btn btn--small" id="stopBtn">⏸ Стоп</button>
+                    <div class="slider__dots" id="dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info" id="info">
+        <div class="container info__inner">
+            <div class="info__col">
+                <h2 class="info__title">Акция «Лето в форме»</h2>
+                <p class="info__text">
+                    Годовой абонимент со скидкой 40%. Успей оформить — предложение
+                    действует ограниченное время!
+                </p>
+            </div>
+            <div class="info__col info__col--countdown">
+                <p class="countdown__label">До конца акции осталось:</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown__item"><span id="cd-days">00</span><small>дней</small></div>
+                    <div class="countdown__item"><span id="cd-hours">00</span><small>часов</small></div>
+                    <div class="countdown__item"><span id="cd-min">00</span><small>минут</small></div>
+                    <div class="countdown__item"><span id="cd-sec">00</span><small>секунд</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Запись на пробную тренировку</h2>
+            <p class="contact__lead">Оставьте заявку — мы перезвоним и подберём программу.</p>
+
+            <form class="form" id="feedbackForm" novalidate>
+                <div class="form__row">
+                    <label class="form__label" for="name">Имя *</label>
+                    <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя">
+                    <span class="form__error" id="err-name"></span>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="phone">Телефон *</label>
+                    <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                    <span class="form__error" id="err-phone"></span>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="email">E-mail *</label>
+                    <input class="form__input" type="email" id="email" name="email" placeholder="mail@example.com">
+                    <span class="form__error" id="err-email"></span>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="goal">Цель тренировок</label>
+                    <select class="form__input" id="goal" name="goal">
+                        <option value="">— выберите —</option>
+                        <option>Похудение</option>
+                        <option>Набор массы</option>
+                        <option>Поддержание формы</option>
+                        <option>Реабилитация</option>
+                    </select>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="message">Комментарий</label>
+                    <textarea class="form__input" id="message" name="message" rows="4" placeholder="Удобное время для звонка и пожелания"></textarea>
+                </div>
+
+                <div class="form__row form__row--check">
+                    <label class="form__check">
+                        <input type="checkbox" id="agree" name="agree">
+                        Согласен на обработку персональных данных
+                    </label>
+                    <span class="form__error" id="err-agree"></span>
+                </div>
+
+                <button type="submit" class="btn btn--big">Отправить заявку</button>
+                <p class="form__success" id="formSuccess">Спасибо! Заявка отправлена, мы скоро свяжемся с вами.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <span class="logo__text logo__text--light">ENERGY</span>
+                <p>Фитнес-клуб нового поколения.<br>Энергия для твоей жизни.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>г. Москва, ул. Спортивная, 12</p>
+                <p>Тел: +7 (495) 123-45-67</p>
+                <p>E-mail: info@energy-club.ru</p>
+            </div>
+            <div class="footer__col">
+                <h4>Режим работы</h4>
+                <p>Открыто круглосуточно</p>
+                <p>24 часа / 7 дней</p>
+                <a href="#top" class="footer__top">↑ Наверх</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 Фитнес-клуб ENERGY. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                                             
